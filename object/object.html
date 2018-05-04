@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>object</title>
+
+</head>
+
+<body>
+  <script>
+
+    var porsche = {
+      make: 'Grmany',
+      model: 'macan',
+      year: 2016,
+      color: 'red',
+      passengers: 4,
+      mileage: 200000
+
+    };
+
+
+
+    var ford = {
+      make: 'wulin',
+      model: 'hongguang',
+      year: 2006,
+      color: 'silver',
+      passengers: 7,
+      mileage: 300000,
+      start: false,
+      drive: function () {
+        if (this.started == true) {
+          alert("zoom zoom zoom !!");
+        } else {
+          alert("你必须让车先启动");
+        }
+      },
+
+      start: function () {
+        this.started = true;
+      },
+
+      stop: function () {
+        thi.started = false;
+      }
+
+    }
+
+
+    ford.start();
+    ford.stop.drive();
+
+
+
+
+
+    document.write("porsche" + "颜色是" + porsche.color + "<br>")
+    document.write("ford" + "颜色是" + ford.color + "<br>");
+
+    function isNew(car) {
+
+      if (car.year <= 2016 && car.mileage < 10000) {
+        document.write("您的车" + car.model + "新车")
+      } else {
+        document.write("您的车" + car.model + "不值钱了")
+      }
+      document.write("<br>")
+    }
+    isNew(ford);
+
+  </script>
+</body>
+
+</html>
